@@ -1,0 +1,130 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+<div class="header">
+  <div style="float: left"><img src="zine_text_1.jpg" width="180" /></div>
+  <div style="float: right"><img src="zine_text_2.jpg" width="180" /></div>
+ <h1>Sea//Sons</h1>
+  <p>A digital facsimile of the aleatoric poem. The full zine can be viewed <a href="PDFs/seasons_zine.pdf" class="page">here.</a></p>
+</div>
+</head>
+
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+</div>
+
+<div id="About" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>About</h3>
+  <p>This poem uses a deck of cards to pseudo-randomly determine the content and placement of each of its lines. Each suit corresponds to a particular season, and each card in that suit corresponds to a numbered line under that season’s heading (1 being the ace, 2 being the card numbered 2, and so on through the king). Spades is the suit for fall, clubs for winter, diamonds for spring, and hearts for summer. Each season has two lines in the grid: first fall, then winter, spring, and summer on the bottom.</p>
+<p>Draw four cards—or more, or less, depending on your own preference—and place the corresponding lines in their squares in the 8 x 8 grid included below (e.g., the 3 of spades would place the third line of fall in the third square of the grid’s top row). The remaining three spaces in each season’s second row can be occupied at your discretion—if you would prefer to move a line into one of those spaces you may do so, provided the line remains within its assigned season. There is an extra line for each season, included at the end of the list, that can be substituted for any of the other lines if you so choose, as well.</p>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<div class="deck">
+    <div id="deck" hidden="true"></div>
+</div>
+<div class="content">
+<div align="center" class="dealt2">
+ <a href="javascript:void(0)" onclick="window.location.reload();" class="btn">Generate a New Poem</a>
+<div align="center" id="dealt"></div>
+</div>
+<div class="cn">
+<div class="tl">
+  <div class="tl_2">
+  <div id="1"> &nbsp; &nbsp;</div>
+  <div id="2"></div>
+  <div id="3"> &nbsp; &nbsp;</div>
+  <div id="4"></div>
+  <div id="5"> &nbsp; &nbsp;</div>
+  <div id="6"></div>
+  <div id="7"> &nbsp; &nbsp;</div>
+  <div id="8"></div>
+  <div id="9"> &nbsp; &nbsp;</div>
+  <div id="10"></div>
+  <div id="11"> &nbsp; &nbsp;</div>
+  <div id="12"></div>
+  <div id="13"> &nbsp; &nbsp;</div>
+  <div id="14"></div>
+  <div id="15"> &nbsp; &nbsp;</div>
+  <div id="16"></div>
+
+  <div id="17"> &nbsp; &nbsp;</div>
+  <div id="18"></div>
+  <div id="19"> &nbsp; &nbsp;</div>
+  <div id="20"></div>
+  <div id="21"> &nbsp; &nbsp;</div>
+  <div id="22"></div>
+  <div id="23"> &nbsp; &nbsp;</div>
+  <div id="24"></div>
+  <div id="25"> &nbsp; &nbsp;</div>
+  <div id="26"></div>
+  <div id="27"> &nbsp; &nbsp;</div>
+  <div id="28"></div>
+  <div id="29"> &nbsp; &nbsp;</div>
+  <div id="30"></div>
+  <div id="31"> &nbsp; &nbsp;</div>
+  <div id="32"></div>
+
+
+  <div id="33"> &nbsp; &nbsp;</div>
+  <div id="34"></div>
+  <div id="35"> &nbsp; &nbsp;</div>
+  <div id="36"></div>
+  <div id="37"> &nbsp; &nbsp;</div>
+  <div id="38"></div>
+  <div id="39"> &nbsp; &nbsp;</div>
+  <div id="40"></div>
+  <div id="41"> &nbsp; &nbsp;</div>
+  <div id="42"></div>
+  <div id="43"> &nbsp; &nbsp;</div>
+  <div id="44"></div>
+  <div id="45"> &nbsp; &nbsp;</div>
+  <div id="46"></div>
+  <div id="47"> &nbsp; &nbsp;</div>
+  <div id="48"></div>
+
+  <div id="49"> &nbsp; &nbsp;</div>
+  <div id="50"></div>
+  <div id="51"> &nbsp; &nbsp;</div>
+  <div id="52"></div>
+  <div id="53"> &nbsp; &nbsp;</div>
+  <div id="54"></div>
+  <div id="55"> &nbsp; &nbsp;</div>
+  <div id="56"></div>
+  <div id="57"> &nbsp; &nbsp;</div>
+  <div id="58"></div>
+  <div id="59"> &nbsp; &nbsp;</div>
+  <div id="60"></div>
+  <div id="61"> &nbsp; &nbsp;</div>
+  <div id="62"></div>
+  <div id="63"> &nbsp; &nbsp;</div>
+  <div id="64"></div>
+
+  </div>
+
+</div>
+</div>
+</body>
+</html>
