@@ -1,0 +1,28 @@
+.large_title {
+	font-size: 5em;
+	margin-bottom: 0.1em;
+	line-height: 90%
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+p {
+	display: inline-block;
+	margin: 1em 0;
+	font-size: 1.2em;
+	max-width: 45em;
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+p2 {
+	display: inline-block;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
+	font-size: 1em;
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+@media screen and (max-width: 680px)
+	.large_title {
+		font-size: 3em;
+	}
+}
