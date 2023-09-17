@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>
+    Octet
+  </h1>
+  <h3>
+    By Briar Moro
+  </h3>
+<div class="grid-container">
+  <div id="one">1</div>
+  <div id="two">2</div>
+  <div id="three">3</div>
+  <div id="four">4</div>
+  <div id="five">5</div>
+  <div id="six">6</div>
+  <div id="seven">7</div>
+  <div id="eight">8</div>
+</div>
+</body>
+<script>
+var poem_1 = [
+"The running of the river",
+"Was broken up by the sudden burst",
+"Of noise: like thunder, like gunfire.",
+"The current stopped, momentarily,",
+"Frozen in fractured time,",
+"Cut off from source of motion,",
+"Lolling in ancient stillness",
+"That felt new, new—",
+"New like a thrift store coat",
+"Washed clean of must and mothball",
+"Ghosts and sprayed thoroughly",
+"With aerosol angel descenters.",
+"There was no more flow,",
+"No rush and rumble;",
+"Just glassy water in statuesque stillness",
+"And rocks beneath the clear facade",
+"Halted mid-tumble, floating,",
+"Like dulled bronze balloons",
+"Hung ornaments for crawfish",
+"And salamanders.",
+"",
+"She looked up from the bottom of the gorge",
+"And",
+"Spied the spores of smoke",
+"Rising up from a castle of flame,",
+"And smiled, inexplicably,",
+"Despite herself.",
+"The explosion was silent,",
+"Unalarming, a sliver of ice",
+"Beneath the snow of cloud-blanked sky,",
+"A hiccup of the gods.",
+"",
+"The world came to a stop,",
+"But she was still moving,",
+"Skirt blowing in the wind",
+"And foraging basket full of mushrooms",
+"Swaying gently as her arms swung",
+"Akimbo, relaxed, and she gazed on",
+"At the plume or upwards incineration",
+"Burning up motion and rendering entropy unto naught."
+];
+
+poem_2 = [
+  "He was near the summit,",
+  "Boots well broken in by now,",
+  "Soles softened and toes blistered,",
+  "Heels calloused and littered with rough pink patches",
+  "Wrought by strenuous hike.",
+  "The pine wall broken,",
+  "Bare rock above and all around him,",
+  "Gray slate and shale",
+  "Crunching smooth and crumbling underfoot,",
+  "His journey was nearing its end.",
+  "The snow-slapped peak stretched out languorously before him,",
+  "Beckoning its conquering,",
+  "When the wind stopped.",
+  "",
+  "The birds froze, too, halted mid-flight:",
+  "Wings laid out like a book",
+  "With broken spine hanging limply open,",
+  "Unread. The fir branches shivered,",
+  "Still, the pines feinting movement despite",
+  "Their incapacitation. The sky",
+  "Bled still-slipping clouds",
+  "And shed its bright blue hue",
+  "Like snake skin.",
+  "The flames in the distance gave him pause,",
+  "And he found himself unable to continue to climb."
+
+];
+
+poem_3 = [
+
+"The grass brushed against their knees",
+"Like paintbrush horsehair into fresh canvas",
+"Pushing thin paint into freshly stretched white",
+"Dyeing the unreflecting mirror",
+"With colors of crushed earth",
+"Overturned by the bare feet",
+"Running in cycles of pitterpat",
+"Frenzy over the soft-packed soul,",
+"Still moist from yesterday’s rain.",
+"They ran like thunder,",
+"Like horses spooked by a sudden",
+"Glint of the sun against gunmetal;",
+"Like fireflies burning with the leftover",
+"Sparks of the faded sun,",
+"They fluttered around the field,",
+"Harried but free.",
+"Joy filled their footfalls,",
+"Resounded from their soles",
+"Like laughter,",
+"Their song of motion,",
+"Of effortless, natural dance."
+];
+
+poem_4 = [
+  "The snails and salamanders curled around her feet",
+  "Like whirlpools of living matter",
+  "Suckling from skin of toe and ankle.",
+  "She has seen life ebb and fade like",
+  "The swirling waters, has seen",
+  "Friends sink into grave like tadpoles",
+  "Into hollows of mud and stone,",
+  "Has seen breath cease as the wind picks up",
+  "And blows frail bodies, or ashes,",
+  "Into the oblivion of the far-off distance,",
+  "The beyond-sight,",
+  "Sunk behind the broken masts of the sun’s failing ship",
+  "As it dives under the horizon,",
+  "Plummeting downwards to plumb depths",
+  "Of earth we cannot fathom,",
+  "Apollo says,",
+  "Although he is sometimes called a liar.",
+  "And Apollo now seems present",
+  "In the great billowing chimneystack of fire",
+  "And smoke that flings itself upwards",
+  "Towards the heavens",
+  "(Not down, eyes averted, like self-sacrificing sun),",
+  "Unafraid,",
+  "Unrelenting,",
+  "Hurtling toward what it claims unrepentantly as its own,",
+  "Destiny of cloud and cinder."
+];
+
+poem_5 = [
+  "We are swayed and sing and bow down",
+  "Beneath the bucking whiplash of the winds",
+  "That brush through us like ghosts,",
+  "Like phantasms of force and fury,",
+  "That pry us open and pluck us from the festoons of forests",
+  "For purposes unknown, molded by the whims of heaven.",
+  "We are feted by the galing skies,",
+  "Lifted up by the thin arms of heaven",
+  "And laid on the breast of our mother,",
+  "The altar of the earth,",
+  "To suckle the milk of her unity, her peace.",
+  "Until the light remains",
+  "As the only thing standing",
+  "In the ruins of a world once",
+  "Sunken into darkness,",
+  "We will sing to sustain it—",
+  "To breathe life where",
+  "There is would only be stillness,",
+  "Or sorrow."
+];
+
+poem_6 = [
+  "Crawling beneath soot-soaked earth",
+  "The motion, ceaseless motion",
+  "Of the life unspooling",
+  "In ragged pools of flesh,",
+  "Intertwining with roots and stones",
+  "The troubled shake of limbless worm",
+  "And the sticky-brittle contortions of beetles’ spiked legs,",
+  "sickly sweet in their grace and violence like an",
+ "Ice cream cone full of blood.",
+  "Feeding trunks of ancient brood,",
+  "Spitting nutrients up into their hallowed wood,",
+  "The dirt gives life and eats the dead,",
+  "Swallows sallow corpses like",
+  "Clouds sucked into the sky:",
+  "Empty, but filling,",
+  "And free."
+
+];
+
+poem_7 = [
+  "She cannot help but weep for her children,",
+  "Arrayed in the golden thorns of the sun",
+  "Bleeding light onto the earth like",
+  "Waves of luminous rise and looping over",
+  "Crashing downwards into sea,",
+  "Light into light,",
+  "Ocean into ocean,",
+  "The salt of the sun spilled into",
+  "Pool of effulgent sky.",
+  "They run in circles,",
+  "Look up at her face imploringly,",
+  "Cover eyes and avert gaze downwards,",
+  "Raise calloused hands in desperate",
+  "Appeals to heaven.",
+  "The pillar of smoke rises",
+  "To the firmament like a letter",
+  "Penned by hands of flame and ash,",
+  "Missive shooting missile",
+  "In tower of stillness and conflagration."
+];
+
+poem_8 = [
+  "The stillness of the wind and trees",
+  "And birds did not startled him.",
+  "He had come to expect the unusual",
+  "And unexpected in the woods",
+  "That he waded through like a prayer",
+  "Through the wilds of spiritual being,",
+  "Wandering and wafting toward its intended target like an invisible letter of love and devotion,",
+  "Want and need,",
+  "Unease and calm,",
+  "Communication and silence.",
+  "",
+  "The smoke  rose above him first—",
+  "Then he saw the flames flickering up",
+  "Towards the base of the blast,",
+  "Peeking fiery heads above the tree line—",
+  "Then the shockwave of bursting boom",
+  "Hit him in the chest and froze bones temporarily into reverberating tremors of startled silence.",
+  "But he continued to walk,",
+  "Even through the shaking boom—",
+  "His legs seemed to carry him forward of their own accord.",
+  "",
+  "Eventually the birdsong and fluttering of wings",
+  "And flittering flights from nest to protruding worm resumed,",
+  "And the springs again gurgled and the squirrels leapt and played and chittered",
+  "And the spiders wove nests like tapestries of living art,",
+  "Their lives inseparable from their creation.",
+  "And the walker strode on,",
+  "Content to be moving,",
+  "Moving into a present that was ever-unfolding into itself,",
+  "Into him and others and the trees and birds and air and soil,",
+  "That was at once all and nothing,",
+  "An eternal symphony without an end."
+
+
+];
+
+    function randomNumber(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+
+    function showPoemText(){
+          let i = 0
+          // set initial poem_text
+          let poem_text = poem_1[i]
+          $('#one').text(poem_text);
+
+          // change it on interval
+          setInterval(function(){
+            let poem_text = poem_1[i++ % poem_1.length]
+            $('#one').text(poem_text);
+          }, randomNumber(1700, 4200));
+        }
+    showPoemText()
+
+    function showPoemText2(){
+          let i = 0
+          // set initial poem_text
+          let poem_text = poem_2[i]
+          $('#two').text(poem_text);
+
+          // change it on interval
+          setInterval(function(){
+            let poem_text = poem_2[i++ % poem_2.length]
+            $('#two').text(poem_text);
+          }, randomNumber(1700, 4200));
+        }
+    showPoemText2()
+
+    function showPoemText3(){
+          let i = 0
+          // set initial poem_text
+          let poem_text = poem_3[i]
+          $('#three').text(poem_text);
+
+          // change it on interval
+          setInterval(function(){
+            let poem_text = poem_3[i++ % poem_3.length]
+            $('#three').text(poem_text);
+          }, randomNumber(1700, 4200));
+        }
+    showPoemText3()
+
+    function showPoemText4(){
+          let i = 0
+          // set initial poem_text
+          let poem_text = poem_4[i]
+          $('#four').text(poem_text);
+
+          // change it on interval
+          setInterval(function(){
+            let poem_text = poem_4[i++ % poem_4.length]
+            $('#four').text(poem_text);
+          }, randomNumber(1700, 4200));
+        }
+    showPoemText4()
+
+    function showPoemText5(){
+          let i = 0
+          // set initial poem_text
+          let poem_text = poem_5[i]
+          $('#five').text(poem_text);
+
+          // change it on interval
+          setInterval(function(){
+            let poem_text = poem_5[i++ %  poem_5.length]
+            $('#five').text(poem_text);
+          }, randomNumber(1700, 4200));
+        }
+    showPoemText5()
+
+    function showPoemText6(){
+          let i = 0
+          // set initial poem_text
+          let poem_text = poem_6[i]
+          $('#six').text(poem_text);
+
+          // change it on interval
+          setInterval(function(){
+            let poem_text = poem_6[i++ %  poem_6.length]
+            $('#six').text(poem_text);
+          }, randomNumber(1700, 4200));
+        }
+    showPoemText6()
+
+    function showPoemText7(){
+          let i = 0
+          // set initial poem_text
+          let poem_text = poem_7[i]
+          $('#seven').text(poem_text);
+
+          // change it on interval
+          setInterval(function(){
+            let poem_text = poem_7[i++ %  poem_7.length]
+            $('#seven').text(poem_text);
+          }, randomNumber(1700, 4200));
+        }
+    showPoemText7()
+
+    function showPoemText8(){
+          let i = 0
+          // set initial poem_text
+          let poem_text = poem_8[i]
+          $('#eight').text(poem_text);
+
+          // change it on interval
+          setInterval(function(){
+            let poem_text = poem_8[i++ %  poem_8.length]
+            $('#eight').text(poem_text);
+          }, randomNumber(1700, 4200));
+        }
+    showPoemText8()
+
+
+</script>
