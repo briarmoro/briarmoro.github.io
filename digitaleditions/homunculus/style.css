@@ -1,0 +1,39 @@
+.wrap {
+    width: 100%;
+    overflow:auo;
+    }
+
+.left_float {
+    float:left; 
+    width: 50%;
+}
+
+.right_float {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+.a_line_1, .a_line_2, .a_line_3, .a_line_4, .a_line_5, .a_line_6  {
+    background: #ff8585;
+    }
+
+.b_line_1, .b_line_2, .b_line_3, .b_line_4, .b_line_5, .b_line_6 {
+    background: #ffc37a;
+    }
+
+.c_line_1, .c_line_2, .c_line_3, .c_line_4, .c_line_5, .c_line_6 {
+    background:  #fff99e;
+}
+
+.d_line_1, .d_line_2, .d_line_3, .d_line_4, .d_line_5, .d_line_6 {
+    background:  #befcb3;
+}
+
+.e_line_1, .e_line_2, .e_line_3, .e_line_4, .e_line_5, .e_line_6 {
+    background: #66f0ff;
+    }
+
+.f_line_1, .f_line_2, .f_line_3, .f_line_4, .f_line_5, .f_line_6 {
+    background:  #e1b7f7;
+    }
